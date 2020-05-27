@@ -1,4 +1,5 @@
 const logs = require("./logs")
+const users = require("./users")
 
 
 
@@ -9,4 +10,7 @@ module.exports = function (app) {
     // app.delete('/home',city.del);
     app.put('/logs', logs.addLog);
     app.get('/logs', logs.getLogs);
+    app.post('/api/users/register', users.register)
+    app.post('/api/users/login', users.login)
+    
 }
